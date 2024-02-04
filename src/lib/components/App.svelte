@@ -4,5 +4,5 @@
 </script>
 
 <Canvas>
-  <Scene />
+  <Scene num={1000} showLinks={true}  />
 </Canvas>

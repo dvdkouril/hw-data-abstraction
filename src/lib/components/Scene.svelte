@@ -7,11 +7,11 @@
   scene.background = new Color("#ffffff");
 
   // $: spherePositions = generateRandomSpheres(1000, 5);
-  // const NUM = 1000;
-  const NUM = 10;
-  const RADIUS = 6;
-  const showLinks = true;
-  $: spherePositions = generateRandomPointsInSphere(NUM, RADIUS);
+  export let num: number;
+  // const NUM = 10;
+  export const radius = 6;
+  export let showLinks: boolean;
+  $: spherePositions = generateRandomPointsInSphere(num, radius);
   $: tubes = computeTubes(spherePositions);
 
 
@@ -110,6 +110,7 @@
   fov={15}
 >
   <OrbitControls
+    autoRotate
     enableZoom={true}
     enableDamping
     target.y={1.5}
